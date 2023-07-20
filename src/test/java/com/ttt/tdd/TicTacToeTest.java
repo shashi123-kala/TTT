@@ -10,6 +10,8 @@ public class TicTacToeTest {
 
 	TicTacToe tictactoe ;
 	//= new TicTacToe();
+	public static final Character FIRST_PLAYER = 'X';
+	public static final Character SECOND_PLAYER = 'O';
 	
 	 @BeforeEach
 	    public final void before() {
@@ -24,13 +26,13 @@ public class TicTacToeTest {
 	@Test
 	public void playWithFIrstPlayer() {
 		Character actual = tictactoe.play(1, 1,'X');
-		assertEquals('X', actual);
+		assertEquals(FIRST_PLAYER, actual);
 	}
 	
 	@Test
 	public void playWithSecondPlayer() {
 		Character actual = tictactoe.play(1, 2,'O');
-		assertEquals('O', actual);
+		assertEquals(SECOND_PLAYER, actual);
 	}
 
 }
